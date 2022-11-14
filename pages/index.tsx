@@ -3,6 +3,8 @@ import Navbar from "./api/src/components/Navbar/Navbar";
 import GlobalStyle from "../styles/globals.css";
 import { ThemeProvider } from "styled-components";
 import { LightTheme } from "../styles/theme";
+import styled from "styled-components";
+import About from "./api/src/components/About/About";
 
 export default function Home() {
   return (
@@ -53,7 +55,17 @@ export default function Home() {
           />
         </Head>
         <Navbar />
+        <Container>
+          <About />
+        </Container>
       </ThemeProvider>
     </div>
   );
 }
+
+const Container = styled.div`
+  max-width: 1240px;
+  padding: 0 32px;
+  width: 100%;
+  height: 100%;
+`;
