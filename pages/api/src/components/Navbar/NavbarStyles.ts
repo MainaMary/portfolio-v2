@@ -16,29 +16,15 @@ export const Logo = styled.h2`
   font-size: 32px;
   font-weight: 700;
 `;
-export const MenuItems = styled.ul.attrs(
-  (props: { openMenu: boolean }) => props
-)`
+export const MenuItems = styled.ul`
   display: flex;
   width: 40%;
   justify-content: space-between;
   list-style-type: none;
+
   @media screen and (max-width: 768px) {
     display: none;
   }
-  // @media screen and (max-width: 768px) {
-  //   top: 80px;
-  //   cursor: pointer;
-  //   flex-direction: column;
-  //   width: 100%;
-  //   position: absolute;
-  //   left: ${(props) => (props.openMenu ? 0 : "-100%")};
-  //   opacity: 1;
-  //   transition: all 0.5s ease;
-  //   background: #101522;
-  //   height: calc(100% - 80px);
-  //   z-index: 10;
-  // }
 `;
 
 export const LinkTag = styled(Link)`
@@ -71,6 +57,11 @@ export const Overlay = styled.div`
   background-color: #000;
   opacity: 0.6;
   z-index: 100;
+  display: none;
+
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
 `;
 
 export const Sidebar = styled.div`
@@ -84,6 +75,7 @@ export const Sidebar = styled.div`
   width: 60%;
   width: calc(60% - 52px);
   z-index: 100;
+  transition: 0.8s all ease;
   @media screen and (max-width: 768px) {
     width: 60%;
   }

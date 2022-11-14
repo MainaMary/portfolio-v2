@@ -49,15 +49,15 @@ const Navbar = () => {
   return (
     <Nav>
       <Logo>Logo</Logo>
-      {openMenu && (
-        <MenuItems openMenu>
-          {menuLinks.map((item) => (
-            <LinkTag key={item.id} href={item.path}>
-              <ListItems> {item.item}</ListItems>
-            </LinkTag>
-          ))}
-        </MenuItems>
-      )}
+
+      <MenuItems>
+        {menuLinks.map((item) => (
+          <LinkTag key={item.id} href={item.path}>
+            <ListItems> {item.item}</ListItems>
+          </LinkTag>
+        ))}
+      </MenuItems>
+
       <MenuWrapper onClick={handleMenu}>
         <FaBars
           style={style}
