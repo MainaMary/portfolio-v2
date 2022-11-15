@@ -21,7 +21,7 @@ import {
   AiOutlineMedium,
   AiFillTwitterCircle,
 } from "react-icons/ai";
-import Image from "next/image";
+
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
   const [hover, setHover] = useState<boolean>(false);

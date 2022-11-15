@@ -4,6 +4,7 @@ import GlobalStyle from "../styles/globals.css";
 import { ThemeProvider } from "styled-components";
 import { LightTheme } from "../styles/theme";
 import styled from "styled-components";
+import HomePage from "./api/src/components/Home/Home";
 import About from "./api/src/components/About/About";
 
 export default function Home() {
@@ -56,6 +57,7 @@ export default function Home() {
         </Head>
         <Navbar />
         <Container>
+          <HomePage />
           <About />
         </Container>
       </ThemeProvider>
@@ -64,8 +66,7 @@ export default function Home() {
 }
 
 const Container = styled.div`
-  max-width: 1240px;
   padding: 0 32px;
-  width: 100%;
-  height: 100%;
+   max-width: 1500px
+  width: calc(100% - 64px);
 `;

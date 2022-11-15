@@ -8,7 +8,7 @@ export const Nav = styled.nav`
   z-index: 100;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
   padding: 0 32px;
-  position: fixed;
+  //position: fixed;
   width: calc(100% - 64px);
 `;
 export const Logo = styled.h2`
