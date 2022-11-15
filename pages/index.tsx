@@ -66,7 +66,7 @@ export default function Home() {
 }
 
 const Container = styled.div`
-  padding: 0 32px;
+  padding: 0 64px;
    max-width: 1500px
   width: calc(100% - 64px);
 `;

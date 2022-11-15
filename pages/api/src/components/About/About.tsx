@@ -1,28 +1,40 @@
 import React from "react";
-import { AboutWrapper, AboutContent, Skills, Wrap } from "../About/AboutStyles";
+import {
+  AboutWrapper,
+  AboutContent,
+  Skills,
+  SkillsWrapper,
+} from "../About/AboutStyles";
+import { RoundedButton, Text } from "../../../../../styles/globalStyles";
 import Title from "../Title";
+import Link from "next/link";
 const About = () => {
   return (
     <AboutWrapper>
       <AboutContent>
         <Title>About</Title>
-        <div>
+        <Text>
           I am passionate about problem solving using technology and it's
           endless capabilities. I specialize in building exceptional digital
           experiences and intuitive web applications.. My primary focus is
           frontend development using React,Typescript and Nextjs to create
           intuitive user interfaces on the client side. Currently learning
           backend technolgies using NodeJS and MongoDB.
-        </div>
+        </Text>
+        <Link href="https://medium.com/@wanjikumary">
+          Check out my latest articles
+        </Link>
       </AboutContent>
       <Skills>
         <Title>Skills</Title>
-        <Wrap>Website development</Wrap>
-        <Wrap>Responsive web design</Wrap>
-        <Wrap>Building REST APIs</Wrap>
-        <Wrap>Firebase</Wrap>
-
-        <Wrap></Wrap>
+        <SkillsWrapper>
+          <RoundedButton>Website development</RoundedButton>
+          <RoundedButton>Responsive web design</RoundedButton>
+          <RoundedButton>Progressive web application</RoundedButton>
+          <RoundedButton>Building REST APIs</RoundedButton>
+          <RoundedButton>Firebase intergration</RoundedButton>
+          <RoundedButton>Technical writing</RoundedButton>
+        </SkillsWrapper>
       </Skills>
     </AboutWrapper>
   );

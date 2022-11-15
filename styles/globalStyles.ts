@@ -26,13 +26,21 @@ export const DefaultButton = styled.button.attrs(
   font-size: 16px;
   color: ${(props) => (props.primary ? "#fff" : "#e91e63")};
   border-radius: 5px;
-  background: ${(props) => (props.primary ? "#e91e63" : "white")};
+  background: ${(props) => (props.primary ? "#e91e63" : "#ecf0f3")};
   margin: 12px 0;
   font-weight: 500;
   width: 30%;
   border: 2px solid #e91e63;
-  // margin-right: ${(props) => (props.primary ? "70px" : "0")};
   @media screen and (max-width: 768px) {
     width: ${(props) => (props.primary ? "100%" : "100%")};
   }
+`;
+export const RoundedButton = styled(DefaultButton)`
+  border-radius: 50px;
+`;
+export const Text = styled.p`
+font-weight: 500;
+font-size: 16px;
+letter-spacing:0.08;
+line-height: 19.36'
 `;

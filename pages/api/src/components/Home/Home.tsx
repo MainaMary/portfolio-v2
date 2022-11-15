@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { AboutWrapper, Content, ImageWrap, Contact } from "./HomeStyles";
-import { Button, DefaultButton } from "../../../../../styles/globalStyles";
+import {
+  Button,
+  DefaultButton,
+  Text,
+} from "../../../../../styles/globalStyles";
 import { Logo } from "../Navbar/NavbarStyles";
 import Image from "next/image";
 import Profile from "../../../../../public/assets/userProfile.svg";
@@ -21,10 +25,10 @@ const HomePage = () => {
           Hi, my name is <span>Mary Maina</span>
         </h1>
         <h2>I am a front-end Developer</h2>
-        <div>
+        <Text>
           I am a professional frontend developer passionate about building
           intuitive, scalable and effecient web applications.
-        </div>
+        </Text>
         <Contact>
           <DefaultButton primary>Resume</DefaultButton>
           <DefaultButton>Contact me</DefaultButton>
