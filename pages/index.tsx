@@ -4,8 +4,11 @@ import GlobalStyle from "../styles/globals.css";
 import { ThemeProvider } from "styled-components";
 import { LightTheme } from "../styles/theme";
 import styled from "styled-components";
-import HomePage from "./api/src/components/Home/Home";
-import About from "./api/src/components/About/About";
+import { FloatingButton } from "../styles/globalStyles";
+import HomePage from "./api/src/pages/Home/Home";
+import About from "./api/src/pages/About/About";
+import Projects from "./api/src/pages/Projects/Projects";
+import { AiFillCaretUp } from "react-icons/ai";
 
 export default function Home() {
   return (
@@ -57,8 +60,14 @@ export default function Home() {
         </Head>
         <Navbar />
         <Container>
+          <FloatingButton>
+            <AiFillCaretUp
+              style={{ color: "#e91e63", width: "30px", height: "30px" }}
+            />
+          </FloatingButton>
           <HomePage />
           <About />
+          <Projects />
         </Container>
       </ThemeProvider>
     </div>

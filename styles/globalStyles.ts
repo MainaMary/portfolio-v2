@@ -9,6 +9,7 @@ export const Button = styled.button`
   color: white;
   border-radius: 10px;
   border: none;
+  cursor: pointer;
   background-image: linear-gradient(
     to right,
     #fbc2eb 0%,
@@ -30,6 +31,7 @@ export const DefaultButton = styled.button.attrs(
   margin: 12px 0;
   font-weight: 500;
   width: 30%;
+  cursor: pointer;
   border: 2px solid #e91e63;
   @media screen and (max-width: 768px) {
     width: ${(props) => (props.primary ? "100%" : "100%")};
@@ -43,4 +45,22 @@ font-weight: 500;
 font-size: 16px;
 letter-spacing:0.08;
 line-height: 19.36'
+`;
+export const FloatingButton = styled.button`
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  right: 0rem;
+  bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px;
+  text-align: center;
+  padding: 5px;
+  background-color: rgb(230, 205, 205);
+  opacity: 0;
+  transition: all 0.5s;
+  pointer-events: none;
+  cursor: pointer;
 `;
