@@ -5,7 +5,7 @@ import {
   DefaultButton,
   Text,
 } from "../../../../../styles/globalStyles";
-import { Logo } from "../Navbar/NavbarStyles";
+import { Logo } from "../../components/Navbar/NavbarStyles";
 import Image from "next/image";
 import Profile from "../../../../../public/assets/userProfile.svg";
 
@@ -16,7 +16,7 @@ const HomePage = () => {
   const [text, setText] = useState<string>("");
   const timer = 1000;
   return (
-    <AboutWrapper>
+    <AboutWrapper id="home">
       <Content>
         <div>
           <Button>Welcome to my portfolio</Button>
@@ -35,7 +35,7 @@ const HomePage = () => {
         </Contact>
       </Content>
       <ImageWrap>
-        <Image src={Profile} width={600} height={400} alt="profile" />
+        <Image src={Profile} width={1000} height={400} alt="profile" />
       </ImageWrap>
     </AboutWrapper>
   );

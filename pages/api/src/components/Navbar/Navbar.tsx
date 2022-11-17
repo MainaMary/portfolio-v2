@@ -13,7 +13,7 @@ import {
   Logo,
   Socials,
 } from "./NavbarStyles";
-
+import AnchorLink from "react-anchor-link-smooth-scroll";
 import { FaTimes, FaBars } from "react-icons/fa";
 import {
   AiFillLinkedin,
@@ -24,19 +24,28 @@ import {
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
+  const [shadow, setShadow] = useState<boolean>(false);
   const [hover, setHover] = useState<boolean>(false);
   const iconRef = useRef(null);
   const menuLinks = [
-    { id: 1, item: "Home", path: "home" },
-    { id: 2, item: "About", path: "about" },
-    { id: 3, item: "Experience", path: "experience" },
-    { id: 4, item: "Work", path: "work" },
-    { id: 5, item: "Contact", path: "contact" },
+    { id: 1, item: "Home", path: "/#home" },
+    { id: 2, item: "About", path: "/#about" },
+    { id: 3, item: "Projects", path: "/#projects" },
+    { id: 5, item: "Contact", path: "/#contact" },
   ];
   const handleMenu = () => {
     setOpenMenu((prev) => !prev);
   };
-
+  const handleShadow = () => {
+    if (window.scrollY > 80) {
+      setShadow(true);
+    } else {
+      setShadow(false);
+    }
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", handleShadow);
+  }, []);
   const style = { fontSize: "20px", fontWeight: 500 };
   // useEffect(() => {
   //   if (hover) {
@@ -47,7 +56,7 @@ const Navbar = () => {
   // }, [hover]);
 
   return (
-    <Nav>
+    <Nav shadow={shadow}>
       <Logo>Logo</Logo>
 
       <MenuItems>

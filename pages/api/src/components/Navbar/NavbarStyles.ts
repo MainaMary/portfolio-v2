@@ -1,14 +1,16 @@
 import styled from "styled-components";
 import Link from "next/link";
-export const Nav = styled.nav`
+export const Nav = styled.nav.attrs((props: { shadow: boolean }) => props)`
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 80px;
   z-index: 100;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
+  box-shadow: ${(props) =>
+    props.shadow ? "0 2px 5px 0 rgba(0, 0, 0, 0.16)" : "none"};
   padding: 0 64px;
-  //position: fixed;
+  position: fixed;
+  z-index: 2;
   width: calc(100% - 128px);
 `;
 export const Logo = styled.h2`

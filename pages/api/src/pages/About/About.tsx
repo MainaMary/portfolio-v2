@@ -4,13 +4,13 @@ import {
   AboutContent,
   Skills,
   SkillsWrapper,
-} from "../About/AboutStyles";
+} from "./AboutStyles";
 import { RoundedButton, Text } from "../../../../../styles/globalStyles";
-import Title from "../Title";
+import Title from "../../components/Title";
 import Link from "next/link";
 const About = () => {
   return (
-    <AboutWrapper>
+    <AboutWrapper id="about">
       <AboutContent>
         <Title>About</Title>
         <Text>
@@ -21,7 +21,7 @@ const About = () => {
           intuitive user interfaces on the client side. Currently learning
           backend technolgies using NodeJS and MongoDB.
         </Text>
-        <Link href="https://medium.com/@wanjikumary">
+        <Link href="https://medium.com/@wanjikumary" target="_blank">
           Check out my latest articles
         </Link>
       </AboutContent>
