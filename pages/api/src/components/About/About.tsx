@@ -6,7 +6,7 @@ import {
   SkillsWrapper,
 } from "./AboutStyles";
 import { RoundedButton, Text } from "../../../../../styles/globalStyles";
-import Title from "../../components/Title";
+import Title from "../Title";
 import Link from "next/link";
 const About = () => {
   return (

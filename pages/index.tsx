@@ -1,14 +1,15 @@
 import Head from "next/head";
 import Navbar from "./api/src/components/Navbar/Navbar";
-import GlobalStyle from "../styles/globals.css";
+import GlobalStyle from "../styles/globals.css.js";
 import { ThemeProvider } from "styled-components";
 import { LightTheme } from "../styles/theme";
 import styled from "styled-components";
 import { FloatingButton } from "../styles/globalStyles";
-import HomePage from "./api/src/pages/Home/Home";
-import About from "./api/src/pages/About/About";
-import Projects from "./api/src/pages/Projects/Projects";
+import HomePage from "./api/src/components/Home/Home";
+import About from "./api/src/components/About/About";
+import Projects from "./api/src/components/Projects/Projects";
 import { AiFillCaretUp } from "react-icons/ai";
+import Contact from "./api/src/components/Contact/Contact";
 
 export default function Home() {
   return (
@@ -68,6 +69,7 @@ export default function Home() {
           <HomePage />
           <About />
           <Projects />
+          <Contact />
         </Container>
       </ThemeProvider>
     </div>

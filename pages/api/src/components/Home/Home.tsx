@@ -5,7 +5,7 @@ import {
   DefaultButton,
   Text,
 } from "../../../../../styles/globalStyles";
-import { Logo } from "../../components/Navbar/NavbarStyles";
+import { Logo } from "../Navbar/NavbarStyles";
 import Image from "next/image";
 import Profile from "../../../../../public/assets/userProfile.svg";
 

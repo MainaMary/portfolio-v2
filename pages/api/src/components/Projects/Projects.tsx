@@ -1,8 +1,8 @@
 import React from "react";
-import CustomProject from "../../components/CustomProject";
+import CustomProject from "../CustomProject";
 import Cart from "../../../../../public/assets/ShoppingCart.png";
 import Price from "../../../../../public/assets/priceSetter.png";
-import Title from "../../components/Title";
+import Title from "../Title";
 const Projects = () => {
   return (
     <>

@@ -1,3 +1,4 @@
+"use client";
 import styled from "styled-components";
 export const Button = styled.button`
   flex: 1 1 auto;

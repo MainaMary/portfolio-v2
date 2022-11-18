@@ -13,7 +13,7 @@ interface Props {
 import Link from "next/link";
 import { AiFillGithub } from "react-icons/ai";
 import { BsArrowUpRightCircleFill } from "react-icons/bs";
-import { ImageWrap } from "../pages/Home/HomeStyles";
+import { ImageWrap } from "./Home/HomeStyles";
 const CustomProject = (props: Props) => {
   const { title, content, demoLink, githubLink, image } = props;
   return (
